@@ -14,9 +14,9 @@ public class Address {
     }
 
     public String toString() {
-        String returnString;
-        returnString=(flatNumber>0)?(street + " | " + homeNumber + "/" + flatNumber + " | " + postCode + " | " + city):(street + " | " + homeNumber + " | " + postCode + " | " + city);
-        return returnString;
+        String address;
+        address=(flatNumber>0)?(street + " | " + homeNumber + "/" + flatNumber + " | " + postCode/1000 +"-"+postCode%1000 + " | " + city):(street + " | " + homeNumber + " | " + postCode/1000 +"-"+postCode%1000 + " | " + city);
+        return address;
     }
 }
 
